@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paste Image with Overlay</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1;
+            background: white;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .pasted-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #999;
+            z-index: 0;
+        }
+        
+        .instructions {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .upload-btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .upload-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>Image Overlay Tool</h2>
+        <p>Press <kbd>Ctrl+V</kbd> (or <kbd>Cmd+V</kbd> on Mac) to paste an image from your clipboard</p>
+    </div>
+    
+    <div class="container" id="container">
+        <div class="placeholder" id="placeholder">
+            <h3>Paste an image here</h3>
+            <p>Press Ctrl+V or Cmd+V</p>
+        </div>
+        <img id="pastedImage" class="pasted-image" style="display: none;" alt="Pasted content">
+        <img id="overlayImage" class="overlay-image" src="/images/buildabutton.png" alt="Overlay">
+    </div>
+
+    <script>
+        const pastedImg = document.getElementById('pastedImage');
+        const placeholder = document.getElementById('placeholder');
+        
+        // Handle paste event
+        document.addEventListener('paste', (e) => {
+            const items = e.clipboardData.items;
+            
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].type.indexOf('image') !== -1) {
+                    const blob = items[i].getAsFile();
+                    const url = URL.createObjectURL(blob);
+                    
+                    pastedImg.src = url;
+                    pastedImg.style.display = 'block';
+                    placeholder.style.display = 'none';
+                    
+                    e.preventDefault();
+                    break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
