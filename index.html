@@ -146,7 +146,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3" href="/">PFPBTN</a>
+            <a class="navbar-brand fw-bold fs-3" href="/">PFPBTN.com</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -169,8 +169,9 @@
                 <div class="col-lg-10">
                     <span class="price-badge mb-4 d-inline-block">ONLY $5</span>
                     <h1 class="display-2 fw-bold mb-4">
-                        Your PFP. In Real Life.
+                        Match your online identity to your face.
                     </h1>
+
                     <p class="lead fs-2 mb-5 opacity-90">
                         GitHub • Twitter/X • Discord • LinkedIn • Mastodon • Anywhere.<br>
                         We take your exact profile picture and turn it into a 2.25" button pin.
@@ -366,7 +367,7 @@
 
                 // draw overlay on top stretched to full canvas
                 if (overlayImg && overlayImg.complete) {
-                    ctx.drawImage(overlayImg, 0, 0, canvas.width / (window.devicePixelRatio||1), canvas.height / (window.devicePixelRatio||1));
+                    ctx.drawImage(overlayImg, 0, 0, canvas.width / (window.devicePixelRatio || 1), canvas.height / (window.devicePixelRatio || 1));
                 }
 
                 // draw bounding box + handle on top of overlay only when focused
@@ -471,8 +472,8 @@
                     dragging = true;
                 }
 
-                dragStart = {x: p.x, y: p.y};
-                startBox = {x: layer.x, y: layer.y, w: layer.w, h: layer.h};
+                dragStart = { x: p.x, y: p.y };
+                startBox = { x: layer.x, y: layer.y, w: layer.w, h: layer.h };
             });
 
             // blur focus when clicking anywhere outside the canvas
