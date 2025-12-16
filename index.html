@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pfpbtn.com • Turn Your Profile Pic Into a Real Button Pin</title>
-    <meta name="description" content="Your exact PFP from GitHub, Twitter/X, Discord, LinkedIn - printed on a classic 2.25-inch button pin. Only $5. Ships worldwide.">
+    <meta name="description"
+        content="Your exact PFP from GitHub, Twitter/X, Discord, LinkedIn - printed on a classic 2.25-inch button pin. Only $5. Ships worldwide.">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,26 +15,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <style>
-        :root { --primary: #7c3aed; --dark: #0f172a; }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        :root {
+            --primary: #7c3aed;
+            --dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
         .hero {
             background: linear-gradient(135deg, #7c3aed, #a78bfa);
             color: white;
             padding: 160px 0 120px;
         }
+
         .pfp-example {
-            width: 300px; height: 300px;
+            width: 300px;
+            height: 300px;
             object-fit: cover;
             border: 10px solid white;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
         }
+
         .price-badge {
-            background: #fbbf24; color: #000; font-weight: 900;
-            padding: 10px 24px; border-radius: 50px; font-size: 1.6rem;
+            background: #fbbf24;
+            color: #000;
+            font-weight: 900;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 1.6rem;
         }
-        .event-card { transition: transform 0.2s; }
-        .event-card:hover { transform: translateY(-8px); }
-        
+
+        .event-card {
+            transition: transform 0.2s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+        }
+
         .btnsection {
             margin: 0;
             padding: 20px;
@@ -54,7 +76,7 @@
             border-radius: 8px;
             overflow: hidden;
         }
-        
+
         .pasted-image {
             position: absolute;
             top: 0;
@@ -66,8 +88,9 @@
             object-fit: cover;
             z-index: 1;
         }
-        
-        .overlay-image, .default-image {
+
+        .overlay-image,
+        .default-image {
             position: absolute;
             top: 0;
             left: 0;
@@ -76,7 +99,7 @@
             z-index: 2;
             pointer-events: none;
         }
-        
+
         .placeholder {
             position: absolute;
             top: 50%;
@@ -87,15 +110,15 @@
             background: white;
             z-index: 0;
         }
-        
+
         .instructions {
             margin-bottom: 20px;
             padding: 15px;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .upload-btn {
             padding: 10px 20px;
             background: #007bff;
@@ -105,12 +128,13 @@
             cursor: pointer;
             font-size: 14px;
         }
-        
+
         .upload-btn:hover {
             background: #0056b3;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -124,7 +148,8 @@
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#confs">Upcoming Conferences</a></li>
                     <li class="nav-item ms-3">
-                        <a href="https://buy.stripe.com/eVq28saH80Zk8syafMdnW06" class="btn btn-warning fw-bold px-5 py-3">Buy Now - $5</a>
+                        <a href="https://buy.stripe.com/eVq28saH80Zk8syafMdnW06"
+                            class="btn btn-warning fw-bold px-5 py-3">Buy Now - $5</a>
                     </li>
                 </ul>
             </div>
@@ -146,13 +171,13 @@
                     </p>
 
                     <div class="mb-5">
-                        <img src="/images/placeholder2.png" 
-                             alt="Your profile picture as a button pin" class="rounded-circle pfp-example shadow-lg">
+                        <img src="/images/placeholder2.png" alt="Your profile picture as a button pin"
+                            class="rounded-circle pfp-example shadow-lg">
                     </div>
 
-                    <a href="https://buy.stripe.com/eVq28saH80Zk8syafMdnW06" 
-                       class="btn btn-light btn-lg px-5 py-4 fw-bold fs-3 shadow">
-                        Get Your PFPBTN &mdash; Just $5 → 
+                    <a href="https://buy.stripe.com/eVq28saH80Zk8syafMdnW06"
+                        class="btn btn-light btn-lg px-5 py-4 fw-bold fs-3 shadow">
+                        Get Your PFPBTN &mdash; Just $5 →
                     </a>
                 </div>
             </div>
@@ -171,7 +196,8 @@
                 <div class="col-md-4">
                     <i class="fas fa-medal fa-3x text-dark mb-3"></i>
                     <h3>Real Button Pin</h3>
-                    <p>Classic 2.25-inch round, full-color print, metal back, strong safety pin. Built to survive conference lanyards.</p>
+                    <p>Classic 2.25-inch round, full-color print, metal back, strong safety pin. Built to survive
+                        conference lanyards.</p>
                 </div>
                 <div class="col-md-4">
                     <i class="fas fa-magnet fa-3x text-dark mb-3"></i>
@@ -237,7 +263,8 @@
                 </div>
             </div>
             <p class="mt-2">
-                <a href="https://x.com/intent/tweet?text=%40Quasicodo%20add%20us%20to%20your%20conference%20list%20on%20pfpbtn.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/intent/tweet?text=%40Quasicodo%20add%20us%20to%20your%20conference%20list%20on%20pfpbtn.com"
+                    target="_blank" rel="noopener noreferrer">
                     Add your conference!
                 </a>
             </p>
@@ -245,64 +272,360 @@
     </section>
 
     <section class="pb-5 bg-white btnsection">
-        
-        <!-- Build-A-Button -->
+
+        <!-- Build-A-Button (Canvas Editor) -->
         <div class="btncontainer" id="container">
             <div class="placeholder" id="placeholder">
                 <h3>Try It Now!</h3>
-                <p>Paste your PFP here!</p>
+                <p>Paste your PFP here (or upload). Move and resize it to fit the button.</p>
             </div>
-            <img id="pastedImage" class="pasted-image" style="display: none;" alt="Pasted content">
-            <img id="defaultImage" class="default-image" src="/images/quasicodo.png" alt="@quasicodo">
-            <img id="overlayImage" class="overlay-image" src="/images/buildabutton.png" alt="Overlay">
+
+            <canvas id="editorCanvas" aria-label="PFP editor" style="display:block;"></canvas>
+        </div>
+
+        <div class="mt-2">
+            <button id="uploadBtn" class="upload-btn">Upload</button>
+            <input id="fileInput" type="file" accept="image/*" style="display:none">
+            <button id="resetBtn" class="upload-btn">Clear</button>
+            <button id="downloadBtn" class="upload-btn">Download</button>
         </div>
 
         <script>
-            const pastedImg = document.getElementById('pastedImage');
+            // Elements
+            const container = document.getElementById('container');
             const placeholder = document.getElementById('placeholder');
-            const defaultImage = document.getElementById('defaultImage');
-            
-            let hideTimer;
-            
-            // Detect when image enters viewport
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Image is now in viewport, start 5-second timer
-                        clearTimeout(hideTimer);
-                        hideTimer = setTimeout(() => {
-                            if (defaultImage.style.display !== 'none') {
-                                defaultImage.style.display = 'none';
-                            }
-                        }, 3000);
-                    } else {
-                        // Image left viewport, clear timer
-                        clearTimeout(hideTimer);
-                    }
-                });
-            });
-            
-            observer.observe(defaultImage);
-            
-            // Handle paste event
+            const canvas = document.getElementById('editorCanvas');
+            const ctx = canvas.getContext('2d');
+            const uploadBtn = document.getElementById('uploadBtn');
+            const fileInput = document.getElementById('fileInput');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const resetBtn = document.getElementById('resetBtn');
+
+            // Overlay image (on top of everything)
+            const overlayImg = new Image();
+            overlayImg.src = '/images/buildabutton.png';
+
+            // Default pasted image (shown initially)
+            const defaultImage = new Image();
+            defaultImage.src = '/images/quasicodo.png';
+
+            // State for pasted image
+            const layer = {
+                img: null,
+                x: 0,
+                y: 0,
+                w: 0,
+                h: 0
+            };
+
+            // whether the pasted layer currently has focus (show handles)
+            let layerFocused = false;
+
+            let dragging = false;
+            let resizing = false;
+            let dragStart = { x: 0, y: 0 };
+            let startBox = { x: 0, y: 0, w: 0, h: 0 };
+            const handleSize = 14; // CSS pixels
+
+            // HiDPI canvas resize
+            function resizeCanvas() {
+                const rect = container.getBoundingClientRect();
+                // keep square aspect ratio like the container's aspect-ratio: 1
+                const size = Math.min(rect.width, rect.height || rect.width);
+                const dpr = window.devicePixelRatio || 1;
+                canvas.style.width = size + 'px';
+                canvas.style.height = size + 'px';
+                canvas.width = Math.round(size * dpr);
+                canvas.height = Math.round(size * dpr);
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                render();
+            }
+
+            // Render loop
+            function render() {
+                // clear
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // draw placeholder background when no image
+                if (!layer.img) {
+                    // draw a faint background
+                    ctx.fillStyle = '#fff';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                }
+
+                // draw pasted image (if present)
+                if (layer.img) {
+                    ctx.drawImage(layer.img, layer.x, layer.y, layer.w, layer.h);
+                }
+
+                // draw overlay on top stretched to full canvas
+                if (overlayImg && overlayImg.complete) {
+                    ctx.drawImage(overlayImg, 0, 0, canvas.width / (window.devicePixelRatio||1), canvas.height / (window.devicePixelRatio||1));
+                }
+
+                // draw bounding box + handle on top of overlay only when focused
+                if (layer.img && layerFocused) {
+                    ctx.save();
+                    ctx.strokeStyle = 'rgba(0,0,0,0.6)';
+                    ctx.lineWidth = 1;
+                    ctx.strokeRect(layer.x, layer.y, layer.w, layer.h);
+
+                    // handle (bottom-right)
+                    ctx.fillStyle = 'rgba(0,0,0,0.6)';
+                    ctx.fillRect(layer.x + layer.w - handleSize, layer.y + layer.h - handleSize, handleSize, handleSize);
+                    ctx.restore();
+                }
+            }
+
+            // Helpers
+            function isInRect(px, py, rx, ry, rw, rh) {
+                return px >= rx && py >= ry && px <= rx + rw && py <= ry + rh;
+            }
+
+            function getPointerPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+            }
+
+            // Paste handling
             document.addEventListener('paste', (e) => {
-                const items = e.clipboardData.items;
-                
+                const items = e.clipboardData && e.clipboardData.items;
+                if (!items) return;
                 for (let i = 0; i < items.length; i++) {
-                    if (items[i].type.indexOf('image') !== -1) {
-                        const blob = items[i].getAsFile();
-                        const url = URL.createObjectURL(blob);
-                        
-                        pastedImg.src = url;
-                        pastedImg.style.display = 'block';
-                        placeholder.style.display = 'none';
-                        defaultImage.style.display = 'none';
-                        
+                    const it = items[i];
+                    if (it.type.indexOf('image') !== -1) {
+                        const blob = it.getAsFile();
+                        loadImageFromBlob(blob);
                         e.preventDefault();
                         break;
                     }
                 }
             });
+
+            // File upload
+            uploadBtn.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', (ev) => {
+                const f = ev.target.files && ev.target.files[0];
+                if (f) loadImageFromBlob(f);
+            });
+
+            function loadImageFromBlob(blob) {
+                const url = URL.createObjectURL(blob);
+                const img = new Image();
+                img.onload = () => {
+                    layer.img = img;
+                    // fit image inside canvas with padding
+                    const displaySize = Math.min(canvas.clientWidth, canvas.clientHeight);
+                    const maxDim = displaySize * 0.78; // leave some margin
+                    const ratio = Math.min(maxDim / img.width, maxDim / img.height, 1);
+                    layer.w = img.width * ratio;
+                    layer.h = img.height * ratio;
+                    layer.x = (canvas.clientWidth - layer.w) / 2;
+                    layer.y = (canvas.clientHeight - layer.h) / 2;
+                    placeholder.style.display = 'none';
+                    render();
+                    URL.revokeObjectURL(url);
+                };
+                img.src = url;
+            }
+
+            // Load the default pasted image into the layer on startup
+            defaultImage.onload = () => {
+                // set to 100% canvas size
+                const img = defaultImage;
+                layer.img = img;
+                layer.w = canvas.clientWidth;
+                layer.h = canvas.clientHeight;
+                layer.x = 0;
+                layer.y = 0;
+                placeholder.style.display = 'none';
+                render();
+            };
+
+            // Pointer event handling (drag & resize)
+            canvas.addEventListener('pointerdown', (e) => {
+                const p = getPointerPos(e);
+                const hs = handleSize;
+
+                const clickedInside = layer.img && isInRect(p.x, p.y, layer.x, layer.y, layer.w, layer.h);
+                // set focus state: focused if clicked inside, blur otherwise
+                layerFocused = !!clickedInside;
+                render();
+
+                if (!clickedInside) {
+                    // allow pointerdown outside layer to simply unfocus
+                    return;
+                }
+
+                // Now handle dragging/resizing when focused and clicked inside
+                canvas.setPointerCapture(e.pointerId);
+                if (isInRect(p.x, p.y, layer.x + layer.w - hs, layer.y + layer.h - hs, hs, hs)) {
+                    resizing = true;
+                } else {
+                    dragging = true;
+                }
+
+                dragStart = {x: p.x, y: p.y};
+                startBox = {x: layer.x, y: layer.y, w: layer.w, h: layer.h};
+            });
+
+            // blur focus when clicking anywhere outside the canvas
+            document.addEventListener('pointerdown', (e) => {
+                if (e.target !== canvas && !canvas.contains(e.target)) {
+                    if (layerFocused) {
+                        layerFocused = false;
+                        render();
+                    }
+                }
+            });
+
+            // allow Escape key to clear focus
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && layerFocused) {
+                    layerFocused = false;
+                    render();
+                }
+            });
+
+            canvas.addEventListener('pointermove', (e) => {
+                const p = getPointerPos(e);
+                // update cursor
+                if (layer.img) {
+                    const hs = handleSize;
+                    if (isInRect(p.x, p.y, layer.x + layer.w - hs, layer.y + layer.h - hs, hs, hs)) {
+                        canvas.style.cursor = 'nwse-resize';
+                    } else if (isInRect(p.x, p.y, layer.x, layer.y, layer.w, layer.h)) {
+                        canvas.style.cursor = 'grab';
+                    } else {
+                        canvas.style.cursor = 'default';
+                    }
+                }
+
+                if (dragging) {
+                    const dx = p.x - dragStart.x;
+                    const dy = p.y - dragStart.y;
+                    layer.x = startBox.x + dx;
+                    layer.y = startBox.y + dy;
+                    render();
+                } else if (resizing) {
+                    const dx = p.x - dragStart.x;
+                    const dy = p.y - dragStart.y;
+                    // maintain aspect ratio based on original image
+                    const aspect = startBox.w / startBox.h || 1;
+                    let newW = Math.max(20, startBox.w + dx);
+                    let newH = newW / aspect;
+                    // if vertical drag is larger, use dy
+                    if (Math.abs(dy) > Math.abs(dx)) {
+                        newH = Math.max(20, startBox.h + dy);
+                        newW = newH * aspect;
+                    }
+                    layer.w = newW;
+                    layer.h = newH;
+                    render();
+                }
+            });
+
+            function endPointer(e) {
+                dragging = false; resizing = false;
+                try { canvas.releasePointerCapture(e.pointerId); } catch (_) { }
+            }
+            canvas.addEventListener('pointerup', endPointer);
+            canvas.addEventListener('pointercancel', endPointer);
+
+            // Download (export composed image at full canvas resolution)
+            downloadBtn.addEventListener('click', () => {
+                // create an export canvas at the same displayed size
+                const exportCanvas = document.createElement('canvas');
+                const dpr = window.devicePixelRatio || 1;
+                exportCanvas.width = canvas.width; // already in device pixels
+                exportCanvas.height = canvas.height;
+                const ectx = exportCanvas.getContext('2d');
+
+                // draw background
+                ectx.fillStyle = '#fff';
+                ectx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+
+                // draw layer image scaled appropriately
+                if (layer.img) {
+                    const scale = (window.devicePixelRatio || 1);
+                    ectx.drawImage(layer.img, layer.x * scale, layer.y * scale, layer.w * scale, layer.h * scale);
+                }
+
+                // draw overlay at full resolution
+                if (overlayImg && overlayImg.complete) {
+                    ectx.drawImage(overlayImg, 0, 0, exportCanvas.width, exportCanvas.height);
+                }
+
+                const dataUrl = exportCanvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = 'pfpbtn.png';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            });
+
+            // Reset (restore default pasted image)
+            resetBtn.addEventListener('click', () => {
+                if (defaultImage.complete && false) {
+                    const img = defaultImage;
+                    // set to 100% canvas size
+                    layer.img = img;
+                    layer.w = canvas.clientWidth;
+                    layer.h = canvas.clientHeight;
+                    layer.x = 0;
+                    layer.y = 0;
+                    placeholder.style.display = 'none';
+                } else {
+                    layer.img = null;
+                    placeholder.style.display = 'block';
+                }
+                layerFocused = false;
+                render();
+            });
+
+            // Auto-reset after 3 seconds in viewport with default image
+            let autoResetTimer;
+            let hasUserInteracted = false;
+
+            // Track user interactions to prevent auto-reset after manual edits
+            canvas.addEventListener('pointerdown', () => {
+                hasUserInteracted = true;
+                clearTimeout(autoResetTimer);
+            });
+
+            uploadBtn.addEventListener('click', () => {
+                hasUserInteracted = true;
+                clearTimeout(autoResetTimer);
+            });
+
+            // Detect canvas in viewport
+            const canvasObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasUserInteracted && defaultImage.complete) {
+                        // Canvas is now visible, start 3-second timer
+                        clearTimeout(autoResetTimer);
+                        autoResetTimer = setTimeout(() => {
+                            // Only auto-reset if still in viewport and no user interaction
+                            if (!hasUserInteracted && defaultImage.complete) {
+                                resetBtn.click();
+                            }
+                        }, 3000);
+                    } else if (!entry.isIntersecting) {
+                        // Canvas left viewport, clear timer
+                        clearTimeout(autoResetTimer);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            canvasObserver.observe(canvas);
+
+            // Keep canvas sized correctly
+            window.addEventListener('resize', resizeCanvas);
+            // Ensure overlay triggers initial render when loaded
+            overlayImg.addEventListener('load', () => render());
+            // initial size
+            resizeCanvas();
         </script>
     </section>
 
@@ -310,10 +633,10 @@
     <section class="py-5 text-center bg-dark text-white">
         <div class="container">
             <h2 class="display-4 fw-bold">Stop Being Just a Handle</h2>
-            <p class="lead mb-4">Turn your online identity into real-world swag for $5.</p>
-            <a href="https://buy.stripe.com/eVq28saH80Zk8syafMdnW06" 
-               class="btn btn-warning btn-lg px-5 py-4 fw-bold fs-3">
-                Buy Your PFP Button - $5 
+            <p class="lead mb-4">Match your online identity with the real you, with real-world swag for $5.</p>
+            <a href="https://buy.stripe.com/eVq28saH80Zk8syafMdnW06"
+                class="btn btn-warning btn-lg px-5 py-4 fw-bold fs-3">
+                Buy Your PFP Button - $5
             </a>
         </div>
     </section>
@@ -327,4 +650,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
